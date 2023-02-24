@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="app" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dsm_402_qualite_vone.ControllerViewCliente">
+   <children>
+      <AnchorPane fx:id="menu" prefHeight="649.0" prefWidth="1053.0" visible="false">
+         <children>
+            <JFXButton layoutX="988.0" layoutY="14.0" onAction="#mostrarMenu" text="MENU" />
+            <JFXButton layoutX="667.0" layoutY="188.0" onAction="#mostrarInsertar" text="Agregar" />
+            <JFXButton layoutX="896.0" layoutY="188.0" onAction="#mostrarListado" text="Listado" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="insertar" prefHeight="649.0" prefWidth="1053.0">
+         <children>
+            <JFXButton layoutX="979.0" layoutY="14.0" onAction="#mostrarMenu" text="Regresar" />
+            <JFXTextField fx:id="txtNombre" layoutX="488.0" layoutY="63.0" promptText="Nombre" />
+            <JFXTextField fx:id="txtApellidoPaterno" layoutX="488.0" layoutY="94.0" promptText="Apellido Paterno" />
+            <JFXTextField fx:id="txtApellidoMaterno" layoutX="488.0" layoutY="126.0" promptText="Apellido Materno" />
+            <JFXTextField fx:id="txtFechaNacimiento" layoutX="488.0" layoutY="158.0" promptText="Fecha de nacimiento" />
+            <JFXTextField fx:id="txtGenero" layoutX="488.0" layoutY="190.0" promptText="Género" />
+            <JFXTextField fx:id="txtCalle" layoutX="634.0" layoutY="63.0" promptText="Calle" />
+            <JFXTextField fx:id="txtNumeroCasa" layoutX="634.0" layoutY="95.0" promptText="Número de casa" />
+            <JFXTextField fx:id="txtColonia" layoutX="634.0" layoutY="126.0" promptText="Colonia" />
+            <JFXTextField fx:id="txtCiudad" layoutX="634.0" layoutY="158.0" promptText="Ciudad" />
+            <JFXTextField fx:id="txtEstado" layoutX="634.0" layoutY="190.0" promptText="Estado" />
+            <JFXTextField fx:id="txtCP" layoutX="779.0" layoutY="63.0" promptText="Código Postal" />
+            <JFXTextField fx:id="txtCorreoEl" layoutX="778.0" layoutY="95.0" promptText="Correo electrónico" />
+            <JFXTextField fx:id="txtTelefonoMovil" layoutX="778.0" layoutY="126.0" promptText="Teléfono móvil" />
+            <JFXTextField fx:id="txtTelefonoCasa" layoutX="778.0" layoutY="158.0" promptText="Teléfono de casa" />
+            <JFXButton buttonType="RAISED" layoutX="779.0" layoutY="191.0" onAction="#agregar" style="-fx-background-color: #55aa55;" text="Guardar" textFill="#e4e4e4" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="listado" prefHeight="649.0" prefWidth="1053.0" visible="false">
+         <children>
+            <JFXButton fx:id="lis" layoutX="981.0" layoutY="14.0" onAction="#mostrarMenu" text="Regresar" />
+            <TableView fx:id="tblClientes" layoutX="20.0" layoutY="125.0" onMouseClicked="#completarForm" prefHeight="510.0" prefWidth="1024.0" styleClass="tblClientesC">
+               <columns>
+                  <TableColumn fx:id="colNombre" prefWidth="86.0" text="Nombre" />
+                  <TableColumn fx:id="colGenero" prefWidth="30.0" text="Género" />
+                  <TableColumn fx:id="colCorreoEl" prefWidth="75.0" text="Correo electrónico" />
+                  <TableColumn fx:id="colTelefonoMovil" prefWidth="75.0" text="Teléfono móvil" />
+                  <TableColumn fx:id="colEstatus" prefWidth="75.0" text="Estatus" />
+                  <TableColumn fx:id="colNumeroUnico" prefWidth="75.0" text="N° único de cliente" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
